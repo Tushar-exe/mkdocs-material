@@ -1,0 +1,9 @@
+site_name: Grafana Docs
+# site_url: https://mkdocs-material.com
+nav: 
+    - Home: index.md
+    - Installation: installation.md
+    - Datasources: datasources.md
+    - Dashboard: dashboards.md
+    - Troubleshoot: troubleshooting.md
+
