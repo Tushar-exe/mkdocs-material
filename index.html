@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Grafana Docs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Grafana Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem active">
+                                <a href="." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="datasources/" class="nav-link">Datasources</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="dashboards/" class="nav-link">Dashboard</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="troubleshooting/" class="nav-link">Troubleshoot</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="installation/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#grafana-documentation" class="nav-link">Grafana Documentation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#what-is-grafana" class="nav-link">What is Grafana ?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#features" class="nav-link">Features</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#steps-for-installating-grafana" class="nav-link">Steps for installating Grafana</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#datasource" class="nav-link">Datasource</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#what-is-prometheus" class="nav-link">What is Prometheus ?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#steps-for-installing-prometheus" class="nav-link">Steps For Installing Prometheus</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#common-exporter" class="nav-link">Common Exporter</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#steps-for-installing-prometheus_1" class="nav-link">Steps For Installing Prometheus</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#adding-a-prometheus-datasource-in-grafana" class="nav-link">Adding a Prometheus Datasource In Grafana</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#dashboards" class="nav-link">Dashboards</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#troubleshooting" class="nav-link">Troubleshooting</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#common-issues" class="nav-link">Common Issues</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="grafana-documentation">Grafana Documentation</h1>
+<p>Welcome to the Grafana documentation. Here you will find all the necessary information to install and configure grafana. 
+For full documentation visit <a href="https://grafana.com/docs/grafana/latest/">grafana.com</a>.</p>
+<h2 id="project-layout">Project layout</h2>
+<pre><code>grafana docs/
+    - index.md  # The documentation homepage.
+    - installation.md
+    - configuration.md
+    - datasources.md
+    - dashboards.md
+</code></pre>
+<h2 id="what-is-grafana">What is Grafana ?</h2>
+<p>Grafana is a multi-platform open source analystics and interactive visualization web application.It provides</p>
+<ul>
+<li><strong>Charts</strong></li>
+<li><strong>Graphs</strong></li>
+<li><strong>Alerts</strong>
+<img alt="image not available" src="image.png" /></li>
+</ul>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Visualize</strong>: Grafana has a plethora of visualization options to help you understand your data beautifully.</li>
+<li><strong>Alert</strong> : Seamlessly define alerts where it makes sense- while you're in data </li>
+<li><strong>Unify</strong> : Grafana supports dozens of databases,natively.Mix them together in the same Dashboard </li>
+<li><strong>Open Source</strong>: Grafana is completely open source, and backed by a vibrant community.</li>
+<li><strong>Extend</strong> : Discover hundreds of dashboards and plugins in the ooficial library</li>
+</ul>
+<h2 id="steps-for-installating-grafana">Steps for installating Grafana</h2>
+<p>1) <strong>Add Grafana GPG key and repository:</strong></p>
+<pre><code> ```sh
+sudo wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+```
+</code></pre>
+<p>2) <strong>Install Grafana:</strong></p>
+<pre><code>```sh
+sudo apt-get update
+sudo apt-get install grafana
+```
+</code></pre>
+<p>3) <strong>Start and enable Grafana service:</strong></p>
+<pre><code>```sh
+sudo systemctl start grafana-server
+sudo systemctl status grafana-server
+sudo systemctl enable grafana-server
+```
+</code></pre>
+<p>4) <strong>Access Grafana:</strong></p>
+<pre><code>Open your browser and go to `http://localhost:3000`. The default login is `admin` and password is `admin`.
+
+( Note: Grafana by default runs on port no: 3000 )
+</code></pre>
+<h1 id="datasource">Datasource</h1>
+<p>We're going to add Prometheus Datasource to our Grafana. But before adding it we should know about Prometheus</p>
+<h2 id="what-is-prometheus">What is Prometheus ?</h2>
+<ul>
+<li>Prometheus is a software application used for event monitoring and alerting</li>
+<li>It records real-time metrics in a time series database built using a HTTP pull model.
+<img alt="img not available" src="image-1.png" /> </li>
+</ul>
+<h2 id="steps-for-installing-prometheus">Steps For Installing Prometheus</h2>
+<p>1  <strong>Create a Directory:</strong></p>
+<pre><code>```sh
+create a directory of any name say "grafana"
+mkdir grafana 
+cd grafana
+```
+</code></pre>
+<p>2  <strong>Download Prometheus:</strong></p>
+<pre><code>```sh
+wget https://github.com/prometheus/prometheus/releases/download/v2.53.0-rc.1/prometheus-2.53.0-rc.1.linux-amd64.tar.gz
+```
+</code></pre>
+<p>3 <strong>Extract the tar file:</strong></p>
+<pre><code>```sh
+ tar -xvf prometheus-2.53.0-rc.1.linux-amd64.tar.gz
+ cd prometheus-2.53.0-rc.1.linux-amd64/
+```
+</code></pre>
+<p>4  <strong>Create a systemd service file for Prometheus:</strong></p>
+<pre><code class="language-sh">    sudo vi /etc/systemd/system/prometheus.service
+
+    (add the following line of code to make a service file for your Prometheus)
+
+    [Unit]
+    Description=Prometheus Service
+    After=network.target
+
+    [Service]
+    Type=simple
+    ExecStart=/usr/local/bin/prometheus/prometheus --config.file=/usr/local/bin/prometheus/prometheus.yml
+
+    [Install]
+    WantedBy=multi-user.target
+
+</code></pre>
+<p>5 <strong>Reload systemd and start Prometheus:</strong></p>
+<pre><code>```sh
+sudo systemctl daemon-reload
+sudo systemctl start prometheus
+sudo systemctl enable prometheus
+```
+</code></pre>
+<p>6 <strong>Access Prometheus:</strong></p>
+<pre><code>Open your browser and hit `10.208.34.9:9090`.
+(Note : Prometheus by deafault runs on port no. 9090)
+</code></pre>
+<p>Prometheus primarily pulls data from various exporters and endpoints configured in the <code>prometheus.yml</code> file.</p>
+<h1 id="common-exporter">Common Exporter</h1>
+<ul>
+<li><strong>Node Exporter:</strong> Collects hardware and OS metrics.</li>
+</ul>
+<h2 id="steps-for-installing-prometheus_1">Steps For Installing Prometheus</h2>
+<pre><code class="language-sh">wget https://github.com/prometheus/node_exporter/releases/download/v1.8.1/node_exporter-1.8.1.linux-amd64.tar.gz
+
+tar -xvf node_exporter-1.8.1.linux-amd64
+
+sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
+
+</code></pre>
+<p>2  <strong>Create a systemd service file for Node-Exporter:</strong></p>
+<pre><code class="language-sh">    sudo vi /etc/systemd/system/node-exporter.service
+
+    (add the following line of code to make a service file for your Node-Exporter)
+
+    [Unit]
+    Description=Prometheus Node Exporter Service
+    After=network.target
+
+    [Service]
+    Type=simple
+    ExecStart=/usr/local/bin/node_exporter
+
+    [Install]
+    WantedBy=multi-user.target
+</code></pre>
+<p>3 <strong>Start and enable the service</strong>:</p>
+<pre><code class="language-sh">    sudo systemctl daemon-reload
+    sudo systemctl start node_exporter
+    sudo systemctl enable node_exporter
+</code></pre>
+<h2 id="adding-a-prometheus-datasource-in-grafana">Adding a Prometheus Datasource In Grafana</h2>
+<ol>
+<li>
+<p>Go to <code>Configuration &gt; Data Sources</code>.</p>
+</li>
+<li>
+<p>Click on <code>Add data source</code>.</p>
+</li>
+<li>
+<p>Select <code>Prometheus</code> from the list.</p>
+</li>
+<li>
+<p>Configure the following settings:</p>
+<ul>
+<li><strong>Name:</strong>  Prometheus</li>
+<li><strong>URL:</strong>  http://localhost:9090   </li>
+</ul>
+</li>
+<li>
+<p>Click <code>Save &amp; Test</code>.</p>
+</li>
+</ol>
+<h1 id="dashboards">Dashboards</h1>
+<p><strong>Creating a New Dashboard</strong></p>
+<ol>
+<li>Click on the <code>+</code> icon in the sidebar and select <code>Dashboard</code>.</li>
+<li>Click <code>Add new panel</code>.</li>
+<li>Click <code>Save</code> and give your dashboard a name.</li>
+</ol>
+<h1 id="troubleshooting">Troubleshooting</h1>
+<h2 id="common-issues">Common Issues</h2>
+<ul>
+<li>
+<p><strong>Grafana Server Not Starting:</strong></p>
+<ul>
+<li>Check the logs located at <code>/var/log/grafana/grafana.log</code>.</li>
+<li>Ensure the service is running: <code>sudo systemctl status grafana-server</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Datasource Not Connecting:</strong></p>
+<ul>
+<li>Verify the URL and credentials.</li>
+<li>Check the datasource service is running.</li>
+<li>Check Grafana logs for errors.</li>
+</ul>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.5.3
+Build Date UTC : 2024-06-19 10:34:00.797535+00:00
+-->
