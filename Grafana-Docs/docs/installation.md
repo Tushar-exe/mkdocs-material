@@ -1,4 +1,4 @@
-# Steps for installation:
+# Steps for Installing Grafana:
 
 1) **Add Grafana GPG key and repository:**
 

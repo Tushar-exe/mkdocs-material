@@ -1,4 +1,4 @@
-site_name: Grafana Docs
+site_name: Grafana Documentation
 # site_url: https://mkdocs-material.com
 nav: 
     - Home: index.md
