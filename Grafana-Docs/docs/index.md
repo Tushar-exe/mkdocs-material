@@ -161,8 +161,8 @@ sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
 
 ```sh
     sudo systemctl daemon-reload
-    sudo systemctl start node_exporter
-    sudo systemctl enable node_exporter
+    sudo systemctl start node-exporter
+    sudo systemctl enable node-exporter
 ```
 ## Adding a Prometheus Datasource In Grafana
 
