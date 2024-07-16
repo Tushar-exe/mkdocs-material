@@ -33,15 +33,25 @@ For full documentation visit [grafana.com](https://grafana.com/docs/grafana/late
 1) **Add Grafana GPG key and repository:**
 
      ```sh
-    sudo wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
-    sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+    wget -q -O gpg.key https://rpm.grafana.com/gpg.key
+    sudo rpm --import gpg.key
     ```
 
-2) **Install Grafana:**
+2) **Create a yum package manager to include the grafana repository:**
 
     ```sh
-    sudo apt-get update
-    sudo apt-get install grafana
+    Note: for creating this file we need a ROOT access for it, otherwise it will give us an error stating "/etc/yum.repos.d/grafana.repo" E212: Can't open file for 
+    writing.
+    "vi /etc/yum.repos.d/grafana.repo"
+    [grafana]
+    name=grafana
+    baseurl=https://rpm.grafana.com
+    repo_gpgcheck=1
+    enabled=1
+    gpgcheck=1
+    gpgkey=https://rpm.grafana.com/gpg.key
+    sslverify=1
+    sslcacert=/etc/pki/tls/certs/ca-bundle.crt
     ```
 3) **Start and enable Grafana service:**
 
@@ -189,6 +199,10 @@ sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
 2. Click `Add new panel`.
 3. Click `Save` and give your dashboard a name.
 
+**Sample Configured Dashboards**
+![Image not found](image-3.png)
+![Image not found](image-2.png)
+![Image not found](image-4.png)
 
 # Troubleshooting
 

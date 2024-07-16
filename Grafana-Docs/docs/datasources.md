@@ -12,9 +12,9 @@ We're going to add Prometheus Datasource to our Grafana. But before adding it we
 1  **Create a Directory:**
    
     ```sh
-    create a directory of any name say "grafana"
-    mkdir grafana 
-    cd grafana
+    create a directory of any name say "datasource"
+    mkdir datasource 
+    cd datasource
     ```
 
 2  **Download Prometheus:**
