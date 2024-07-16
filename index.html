@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +10,13 @@
         <link rel="shortcut icon" href="img/favicon.ico">
         <title>Grafana Documentation</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
     </head>
@@ -22,7 +26,7 @@
             <div class="container">
                 <a class="navbar-brand" href=".">Grafana Documentation</a>
                 <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -30,26 +34,26 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem active">
-                                <a href="." class="nav-link">Home</a>
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">Home</a>
                             </li>
-                            <li class="navitem">
-                                <a href="installation/" class="nav-link">Installation</a>
+                            <li class="nav-item">
+                                <a href="installations/" class="nav-link">Installation</a>
                             </li>
-                            <li class="navitem">
+                            <li class="nav-item">
                                 <a href="datasources/" class="nav-link">Datasources</a>
                             </li>
-                            <li class="navitem">
+                            <li class="nav-item">
                                 <a href="dashboards/" class="nav-link">Dashboard</a>
                             </li>
-                            <li class="navitem">
+                            <li class="nav-item">
                                 <a href="troubleshooting/" class="nav-link">Troubleshoot</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav ml-auto">
+                    <ul class="nav navbar-nav ms-md-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
@@ -59,7 +63,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="installation/" class="nav-link">
+                                <a rel="next" href="installations/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -70,72 +74,72 @@
 
         <div class="container">
             <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#grafana-documentation" class="nav-link">Grafana Documentation</a>
+            <li class="nav-item" data-bs-level="1"><a href="#grafana-documentation" class="nav-link">Grafana Documentation</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#what-is-grafana" class="nav-link">What is Grafana ?</a>
+            <li class="nav-item" data-bs-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#features" class="nav-link">Features</a>
+            <li class="nav-item" data-bs-level="2"><a href="#what-is-grafana" class="nav-link">What is Grafana ?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#steps-for-installating-grafana" class="nav-link">Steps for installating Grafana</a>
+            <li class="nav-item" data-bs-level="2"><a href="#features" class="nav-link">Features</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="1"><a href="#datasource" class="nav-link">Datasource</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#what-is-prometheus" class="nav-link">What is Prometheus ?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#steps-for-installing-prometheus" class="nav-link">Steps For Installing Prometheus</a>
+            <li class="nav-item" data-bs-level="2"><a href="#steps-for-installating-grafana" class="nav-link">Steps for installating Grafana</a>
               <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#common-exporter" class="nav-link">Common Exporter</a>
+            <li class="nav-item" data-bs-level="1"><a href="#datasource" class="nav-link">Datasource</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#steps-for-installing-prometheus_1" class="nav-link">Steps For Installing Prometheus</a>
+            <li class="nav-item" data-bs-level="2"><a href="#what-is-prometheus" class="nav-link">What is Prometheus ?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#adding-a-prometheus-datasource-in-grafana" class="nav-link">Adding a Prometheus Datasource In Grafana</a>
+            <li class="nav-item" data-bs-level="2"><a href="#steps-for-installing-prometheus" class="nav-link">Steps For Installing Prometheus</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#common-exporter" class="nav-link">Common Exporter</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#steps-for-installing-prometheus_1" class="nav-link">Steps For Installing Prometheus</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#adding-a-prometheus-datasource-in-grafana" class="nav-link">Adding a Prometheus Datasource In Grafana</a>
               <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#dashboards" class="nav-link">Dashboards</a>
+            <li class="nav-item" data-bs-level="1"><a href="#dashboards" class="nav-link">Dashboards</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#troubleshooting" class="nav-link">Troubleshooting</a>
+            <li class="nav-item" data-bs-level="1"><a href="#troubleshooting" class="nav-link">Troubleshooting</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#common-issues" class="nav-link">Common Issues</a>
+            <li class="nav-item" data-bs-level="2"><a href="#common-issues" class="nav-link">Common Issues</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -176,14 +180,24 @@ For full documentation visit <a href="https://grafana.com/docs/grafana/latest/">
 <h2 id="steps-for-installating-grafana">Steps for installating Grafana</h2>
 <p>1) <strong>Add Grafana GPG key and repository:</strong></p>
 <pre><code> ```sh
-sudo wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
-sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+wget -q -O gpg.key https://rpm.grafana.com/gpg.key
+sudo rpm --import gpg.key
 ```
 </code></pre>
-<p>2) <strong>Install Grafana:</strong></p>
+<p>2) <strong>Create a yum package manager to include the grafana repository:</strong></p>
 <pre><code>```sh
-sudo apt-get update
-sudo apt-get install grafana
+Note: for creating this file we need a ROOT access for it, otherwise it will give us an error stating "/etc/yum.repos.d/grafana.repo" E212: Can't open file for 
+writing.
+"vi /etc/yum.repos.d/grafana.repo"
+[grafana]
+name=grafana
+baseurl=https://rpm.grafana.com
+repo_gpgcheck=1
+enabled=1
+gpgcheck=1
+gpgkey=https://rpm.grafana.com/gpg.key
+sslverify=1
+sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 ```
 </code></pre>
 <p>3) <strong>Start and enable Grafana service:</strong></p>
@@ -284,8 +298,8 @@ sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
 </code></pre>
 <p>3 <strong>Start and enable the service</strong>:</p>
 <pre><code class="language-sh">    sudo systemctl daemon-reload
-    sudo systemctl start node_exporter
-    sudo systemctl enable node_exporter
+    sudo systemctl start node-exporter
+    sudo systemctl enable node-exporter
 </code></pre>
 <h2 id="adding-a-prometheus-datasource-in-grafana">Adding a Prometheus Datasource In Grafana</h2>
 <ol>
@@ -316,6 +330,10 @@ sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
 <li>Click <code>Add new panel</code>.</li>
 <li>Click <code>Save</code> and give your dashboard a name.</li>
 </ol>
+<p><strong>Sample Configured Dashboards</strong>
+<img alt="Image not found" src="image-3.png" />
+<img alt="Image not found" src="image-2.png" />
+<img alt="Image not found" src="image-4.png" /></p>
 <h1 id="troubleshooting">Troubleshooting</h1>
 <h2 id="common-issues">Common Issues</h2>
 <ul>
@@ -342,8 +360,7 @@ sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
         <script>
             var base_url = ".",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
@@ -356,7 +373,7 @@ sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>From here you can search these documents. Enter your search terms below.</p>
@@ -376,7 +393,7 @@ sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <table class="table">
@@ -416,6 +433,6 @@ sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
 </html>
 
 <!--
-MkDocs version : 1.5.3
-Build Date UTC : 2024-06-19 12:31:35.979880+00:00
+MkDocs version : 1.6.0
+Build Date UTC : 2024-07-16 10:14:00.541605+00:00
 -->
