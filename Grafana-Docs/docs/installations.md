@@ -27,9 +27,9 @@
 
     ```sh
     (please execute the following statements to configure grafana to start automatically using systemd)
-    sudo /bin/systemctl daemon-reload
-    sudo /bin/systemctl enable grafana-server.service
-    sudo /bin/systemctl start grafana-server.service
+    sudo systemctl daemon-reload
+    sudo systemctl enable grafana-server.service
+    sudo stemctl start grafana-server.service
     ```
 4) **Access Grafana:**
 

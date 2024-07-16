@@ -52,7 +52,7 @@ We're going to add Prometheus Datasource to our Grafana. But before adding it we
 
     ```sh
     sudo systemctl daemon-reload
-    sudo systemctl start prometheus
+    sudo systemctl enable prometheus
     sudo systemctl enable prometheus
     ```
 6 **Access Prometheus:**
