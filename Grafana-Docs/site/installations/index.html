@@ -120,9 +120,9 @@ sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 <p>3) <strong>Start and enable Grafana service:</strong></p>
 <pre><code>```sh
 (please execute the following statements to configure grafana to start automatically using systemd)
-sudo /bin/systemctl daemon-reload
-sudo /bin/systemctl enable grafana-server.service
-sudo /bin/systemctl start grafana-server.service
+sudo systemctl daemon-reload
+sudo systemctl enable grafana-server.service
+sudo stemctl start grafana-server.service
 ```
 </code></pre>
 <p>4) <strong>Access Grafana:</strong></p>
