@@ -4,27 +4,27 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Grafana Documentation</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/fontawesome.min.css" rel="stylesheet">
-        <link href="css/brands.min.css" rel="stylesheet">
-        <link href="css/solid.min.css" rel="stylesheet">
-        <link href="css/v4-font-face.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Datasources - Grafana Documentation</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">Grafana Documentation</a>
+                <a class="navbar-brand" href="..">Grafana Documentation</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,19 +35,19 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a href="." class="nav-link active" aria-current="page">Home</a>
+                                <a href=".." class="nav-link">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="installations/" class="nav-link">Installation</a>
+                                <a href="../installations/" class="nav-link">Installation</a>
                             </li>
                             <li class="nav-item">
-                                <a href="datasources/" class="nav-link">Datasources</a>
+                                <a href="./" class="nav-link active" aria-current="page">Datasources</a>
                             </li>
                             <li class="nav-item">
-                                <a href="dashboards/" class="nav-link">Dashboard</a>
+                                <a href="../dashboards/" class="nav-link">Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a href="troubleshooting/" class="nav-link">Troubleshoot</a>
+                                <a href="../troubleshooting/" class="nav-link">Troubleshoot</a>
                             </li>
                         </ul>
 
@@ -58,12 +58,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href="../installations/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="installations/" class="nav-link">
+                                <a rel="next" href="../dashboards/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -85,65 +85,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#grafana-documentation" class="nav-link">Grafana Documentation</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#what-is-grafana" class="nav-link">What is Grafana ?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#features" class="nav-link">Features</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#steps-for-installating-grafana" class="nav-link">Steps for Installating Grafana</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#steps-for-uninstallating-grafana" class="nav-link">Steps for Uninstallating Grafana</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-            
             <li class="nav-item" data-bs-level="1"><a href="#datasource" class="nav-link">Datasource</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-bs-level="2"><a href="#what-is-prometheus" class="nav-link">What is Prometheus ?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#steps-for-installing-prometheus" class="nav-link">Steps For Installing Prometheus</a>
+            <li class="nav-item" data-bs-level="2"><a href="#steps" class="nav-link">Steps</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-bs-level="1"><a href="#common-exporter" class="nav-link">Common Exporter</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#steps-for-installing-prometheus_1" class="nav-link">Steps For Installing Prometheus</a>
+            <li class="nav-item" data-bs-level="2"><a href="#common-exporters" class="nav-link">Common Exporters</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-bs-level="2"><a href="#adding-a-prometheus-datasource-in-grafana" class="nav-link">Adding a Prometheus Datasource In Grafana</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-bs-level="1"><a href="#dashboards" class="nav-link">Dashboards</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-bs-level="1"><a href="#troubleshooting" class="nav-link">Troubleshooting</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#common-issues" class="nav-link">Common Issues</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -154,90 +110,20 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="grafana-documentation">Grafana Documentation</h1>
-<p>Welcome to the Grafana documentation. Here you will find all the necessary information to install and configure grafana. 
-For full documentation visit <a href="https://grafana.com/docs/grafana/latest/">grafana.com</a>.</p>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>grafana docs/
-    - index.md  # The documentation homepage.
-    - installation.md
-    - configuration.md
-    - datasources.md
-    - dashboards.md
-</code></pre>
-<h2 id="what-is-grafana">What is Grafana ?</h2>
-<p>Grafana is a multi-platform open source analystics and interactive visualization web application.It provides</p>
-<ul>
-<li><strong>Charts</strong></li>
-<li><strong>Graphs</strong></li>
-<li><strong>Alerts</strong>
-<img alt="image not available" src="image.png" /></li>
-</ul>
-<h2 id="features">Features</h2>
-<ul>
-<li><strong>Visualize</strong>: Grafana has a plethora of visualization options to help you understand your data beautifully.</li>
-<li><strong>Alert</strong> : Seamlessly define alerts where it makes sense- while you're in data </li>
-<li><strong>Unify</strong> : Grafana supports dozens of databases,natively.Mix them together in the same Dashboard </li>
-<li><strong>Open Source</strong>: Grafana is completely open source, and backed by a vibrant community.</li>
-<li><strong>Extend</strong> : Discover hundreds of dashboards and plugins in the ooficial library</li>
-</ul>
-<h2 id="steps-for-installating-grafana">Steps for Installating Grafana</h2>
-<p>1) <strong>Add Grafana GPG key and repository:</strong></p>
-<pre><code> ```sh
-wget -q -O gpg.key https://rpm.grafana.com/gpg.key
-sudo rpm --import gpg.key
-```
-</code></pre>
-<p>2) <strong>Create a yum package manager to include the grafana repository:</strong></p>
-<pre><code>```sh
-Note: for creating this file we need a ROOT access for it, otherwise it will give us an error stating "/etc/yum.repos.d/grafana.repo" E212: Can't open file for 
-writing.
-"vi /etc/yum.repos.d/grafana.repo"
-[grafana]
-name=grafana
-baseurl=https://rpm.grafana.com
-repo_gpgcheck=1
-enabled=1
-gpgcheck=1
-gpgkey=https://rpm.grafana.com/gpg.key
-sslverify=1
-sslcacert=/etc/pki/tls/certs/ca-bundle.crt
-```
-</code></pre>
-<p>3) <strong>Start and enable Grafana service:</strong></p>
-<pre><code>```sh
-sudo systemctl start grafana-server
-sudo systemctl status grafana-server
-sudo systemctl enable grafana-server
-```
-</code></pre>
-<p>4) <strong>Access Grafana:</strong></p>
-<pre><code>Open your browser and go to `http://localhost:3000`. The default login is `admin` and password is `admin`.
-
-( Note: Grafana by default runs on port no: 3000 )
-</code></pre>
-<h2 id="steps-for-uninstallating-grafana">Steps for Uninstallating Grafana</h2>
-<ol>
-<li>sudo yum remove grafana</li>
-</ol>
-<p>(If you want to remove Grafana completely, you need to delete all the directories that Grafana creates during installation. To do this, you will need to run certain commands. However, make sure you only use these commands if you're certain you want to delete Grafana entirely.)</p>
-<ol>
-<li>sudo rm -rf /etc/grafana /var/lib/grafana /var/log/grafana</li>
-</ol>
 <h1 id="datasource">Datasource</h1>
 <p>We're going to add Prometheus Datasource to our Grafana. But before adding it we should know about Prometheus</p>
 <h2 id="what-is-prometheus">What is Prometheus ?</h2>
 <ul>
 <li>Prometheus is a software application used for event monitoring and alerting</li>
 <li>It records real-time metrics in a time series database built using a HTTP pull model.
-<img alt="img not available" src="image-1.png" /> </li>
+<img alt="img not available" src="../image-1.png" /> </li>
 </ul>
-<h2 id="steps-for-installing-prometheus">Steps For Installing Prometheus</h2>
+<h2 id="steps">Steps</h2>
 <p>1  <strong>Create a Directory:</strong></p>
 <pre><code>```sh
-create a directory of any name say "grafana"
-mkdir grafana 
-cd grafana
+create a directory of any name say "datasource"
+mkdir datasource 
+cd datasource
 ```
 </code></pre>
 <p>2  <strong>Download Prometheus:</strong></p>
@@ -247,8 +133,8 @@ wget https://github.com/prometheus/prometheus/releases/download/v2.53.0-rc.1/pro
 </code></pre>
 <p>3 <strong>Extract the tar file:</strong></p>
 <pre><code>```sh
- tar -xvf prometheus-2.53.0-rc.1.linux-amd64.tar.gz
- cd prometheus-2.53.0-rc.1.linux-amd64/
+tar -xvf prometheus-2.53.0-rc.1.linux-amd64.tar.gz
+cd prometheus-2.53.0-rc.1.linux-amd64/
 ```
 </code></pre>
 <p>4  <strong>Create a systemd service file for Prometheus:</strong></p>
@@ -271,7 +157,7 @@ wget https://github.com/prometheus/prometheus/releases/download/v2.53.0-rc.1/pro
 <p>5 <strong>Reload systemd and start Prometheus:</strong></p>
 <pre><code>```sh
 sudo systemctl daemon-reload
-sudo systemctl start prometheus
+sudo systemctl enable prometheus
 sudo systemctl enable prometheus
 ```
 </code></pre>
@@ -280,11 +166,11 @@ sudo systemctl enable prometheus
 (Note : Prometheus by deafault runs on port no. 9090)
 </code></pre>
 <p>Prometheus primarily pulls data from various exporters and endpoints configured in the <code>prometheus.yml</code> file.</p>
-<h1 id="common-exporter">Common Exporter</h1>
+<h2 id="common-exporters">Common Exporters</h2>
 <ul>
 <li><strong>Node Exporter:</strong> Collects hardware and OS metrics.</li>
 </ul>
-<h2 id="steps-for-installing-prometheus_1">Steps For Installing Prometheus</h2>
+<p>1  <strong>For installing</strong> </p>
 <pre><code class="language-sh">wget https://github.com/prometheus/node_exporter/releases/download/v1.8.1/node_exporter-1.8.1.linux-amd64.tar.gz
 
 tar -xvf node_exporter-1.8.1.linux-amd64.tar.gz
@@ -308,11 +194,11 @@ sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
     [Install]
     WantedBy=multi-user.target
 </code></pre>
-<p>3 <strong>Start and enable the service</strong>:</p>
-<pre><code class="language-sh">    sudo systemctl daemon-reload
+<p><strong>Start and enable the service</strong>:
+<code>sh
+    sudo systemctl daemon-reload
     sudo systemctl start node-exporter
-    sudo systemctl enable node-exporter
-</code></pre>
+    sudo systemctl enable node-exporter</code></p>
 <h2 id="adding-a-prometheus-datasource-in-grafana">Adding a Prometheus Datasource In Grafana</h2>
 <ol>
 <li>
@@ -334,37 +220,7 @@ sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
 <li>
 <p>Click <code>Save &amp; Test</code>.</p>
 </li>
-</ol>
-<h1 id="dashboards">Dashboards</h1>
-<p><strong>Creating a New Dashboard</strong></p>
-<ol>
-<li>Click on the <code>+</code> icon in the sidebar and select <code>Dashboard</code>.</li>
-<li>Click <code>Add new panel</code>.</li>
-<li>Click <code>Save</code> and give your dashboard a name.</li>
-</ol>
-<p><strong>Sample Configured Dashboards</strong>
-<img alt="Image not found" src="image-3.png" />
-<img alt="Image not found" src="image-2.png" />
-<img alt="Image not found" src="image-4.png" /></p>
-<h1 id="troubleshooting">Troubleshooting</h1>
-<h2 id="common-issues">Common Issues</h2>
-<ul>
-<li>
-<p><strong>Grafana Server Not Starting:</strong></p>
-<ul>
-<li>Check the logs located at <code>/var/log/grafana/grafana.log</code>.</li>
-<li>Ensure the service is running: <code>sudo systemctl status grafana-server</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Datasource Not Connecting:</strong></p>
-<ul>
-<li>Verify the URL and credentials.</li>
-<li>Check the datasource service is running.</li>
-<li>Check Grafana logs for errors.</li>
-</ul>
-</li>
-</ul></div>
+</ol></div>
             </div>
         </div>
 
@@ -372,13 +228,13 @@ sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js"></script>
-        <script src="search/main.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -443,8 +299,3 @@ sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.6.0
-Build Date UTC : 2024-08-21 12:55:38.701124+00:00
--->
