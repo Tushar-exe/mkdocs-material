@@ -70,7 +70,7 @@ For full documentation visit [grafana.com](https://grafana.com/docs/grafana/late
 
 1. sudo yum remove grafana
 
-If you want to remove Grafana completely, you need to delete all the directories that Grafana creates during installation. To do this, you will need to run certain commands. However, make sure you only use these commands if you're certain you want to delete Grafana entirely.
+(If you want to remove Grafana completely, you need to delete all the directories that Grafana creates during installation. To do this, you will need to run certain commands. However, make sure you only use these commands if you're certain you want to delete Grafana entirely.)
 
 2. sudo rm -rf /etc/grafana /var/lib/grafana /var/log/grafana
 
