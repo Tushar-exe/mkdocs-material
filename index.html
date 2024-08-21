@@ -99,7 +99,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#steps-for-installating-grafana" class="nav-link">Steps for installating Grafana</a>
+            <li class="nav-item" data-bs-level="2"><a href="#steps-for-installating-grafana" class="nav-link">Steps for Installating Grafana</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#steps-for-uninstallating-grafana" class="nav-link">Steps for Uninstallating Grafana</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -177,7 +181,7 @@ For full documentation visit <a href="https://grafana.com/docs/grafana/latest/">
 <li><strong>Open Source</strong>: Grafana is completely open source, and backed by a vibrant community.</li>
 <li><strong>Extend</strong> : Discover hundreds of dashboards and plugins in the ooficial library</li>
 </ul>
-<h2 id="steps-for-installating-grafana">Steps for installating Grafana</h2>
+<h2 id="steps-for-installating-grafana">Steps for Installating Grafana</h2>
 <p>1) <strong>Add Grafana GPG key and repository:</strong></p>
 <pre><code> ```sh
 wget -q -O gpg.key https://rpm.grafana.com/gpg.key
@@ -212,6 +216,14 @@ sudo systemctl enable grafana-server
 
 ( Note: Grafana by default runs on port no: 3000 )
 </code></pre>
+<h2 id="steps-for-uninstallating-grafana">Steps for Uninstallating Grafana</h2>
+<ol>
+<li>sudo yum remove grafana</li>
+</ol>
+<p>If you want to remove Grafana completely, you need to delete all the directories that Grafana creates during installation. To do this, you will need to run certain commands. However, make sure you only use these commands if you're certain you want to delete Grafana entirely.</p>
+<ol>
+<li>sudo rm -rf /etc/grafana /var/lib/grafana /var/log/grafana</li>
+</ol>
 <h1 id="datasource">Datasource</h1>
 <p>We're going to add Prometheus Datasource to our Grafana. But before adding it we should know about Prometheus</p>
 <h2 id="what-is-prometheus">What is Prometheus ?</h2>
@@ -434,5 +446,5 @@ sudo cp node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
 
 <!--
 MkDocs version : 1.6.0
-Build Date UTC : 2024-08-21 09:39:42.232873+00:00
+Build Date UTC : 2024-08-21 10:06:13.070341+00:00
 -->
