@@ -87,6 +87,10 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#steps-for-installing-grafana" class="nav-link">Steps for Installing Grafana:</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#steps-for-uninstallating-grafana" class="nav-link">Steps for Uninstallating Grafana</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -129,7 +133,15 @@ sudo stemctl start grafana-server.service
 <pre><code>Open your browser and go to `http://10.208.34.9:3000`. The default login is `admin` and password is `admin`.
 
 ( Note: Grafana by default runs on port no: 3000 and why 10.208.34.9 because we have installed this on shreshta cluster)
-</code></pre></div>
+</code></pre>
+<h2 id="steps-for-uninstallating-grafana">Steps for Uninstallating Grafana</h2>
+<ol>
+<li>sudo yum remove grafana</li>
+</ol>
+<p>If you want to remove Grafana completely, you need to delete all the directories that Grafana creates during installation. To do this, you will need to run certain commands. However, make sure you only use these commands if you're certain you want to delete Grafana entirely.</p>
+<ol>
+<li>sudo rm -rf /etc/grafana /var/lib/grafana /var/log/grafana</li>
+</ol></div>
             </div>
         </div>
 

@@ -37,3 +37,10 @@
 
     ( Note: Grafana by default runs on port no: 3000 and why 10.208.34.9 because we have installed this on shreshta cluster)
     
+## Steps for Uninstallating Grafana
+
+1. sudo yum remove grafana
+
+If you want to remove Grafana completely, you need to delete all the directories that Grafana creates during installation. To do this, you will need to run certain commands. However, make sure you only use these commands if you're certain you want to delete Grafana entirely.
+
+2. sudo rm -rf /etc/grafana /var/lib/grafana /var/log/grafana
