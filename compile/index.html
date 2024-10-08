@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Troubleshoot - Grafana Documentation</title>
+        <title>Compilation - Variorum-Docs</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="..">Grafana Documentation</a>
+                <a class="navbar-brand" href="..">Variorum-Docs</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,16 +38,7 @@
                                 <a href=".." class="nav-link">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../installations/" class="nav-link">Installation</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../datasources/" class="nav-link">Datasources</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../dashboards/" class="nav-link">Dashboard</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Troubleshoot</a>
+                                <a href="./" class="nav-link active" aria-current="page">Compilation</a>
                             </li>
                         </ul>
 
@@ -58,7 +49,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../dashboards/" class="nav-link">
+                                <a rel="prev" href=".." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -85,9 +76,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#troubleshooting" class="nav-link">Troubleshooting</a>
+            <li class="nav-item" data-bs-level="1"><a href="#running-variorum-functions" class="nav-link">Running Variorum Functions</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#common-issues" class="nav-link">Common Issues</a>
+            <li class="nav-item" data-bs-level="2"><a href="#step-1-navigate-to-the-example-directory" class="nav-link">Step 1: Navigate to the Example Directory</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-2-compile-the-example-programs" class="nav-link">Step 2: Compile the Example Programs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-3-set-the-library-path" class="nav-link">Step 3: Set the Library Path</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-4-run-the-executable" class="nav-link">Step 4: Run the Executable</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -98,25 +101,37 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="troubleshooting">Troubleshooting</h1>
-<h2 id="common-issues">Common Issues</h2>
-<ul>
-<li>
-<p><strong>Grafana Server Not Starting:</strong></p>
-<ul>
-<li>Check the logs located at <code>/var/log/grafana/grafana.log</code>.</li>
-<li>Ensure the service is running: <code>sudo systemctl status grafana-server</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Datasource Not Connecting:</strong></p>
-<ul>
-<li>Verify the URL and credentials.</li>
-<li>Check the datasource service is running.</li>
-<li>Check Grafana logs for errors.</li>
-</ul>
-</li>
-</ul></div>
+<h1 id="running-variorum-functions">Running Variorum Functions</h1>
+<h2 id="step-1-navigate-to-the-example-directory">Step 1: Navigate to the Example Directory</h2>
+<p>First, go to the directory where Variorum is installed. Then navigate to the <code>examples</code> directory.</p>
+<p>[cadmin@mgmt01] : <strong>/home/cadmin/variorum_demo/variorum/src/examples</strong></p>
+<p>Inside the examples directory, you will find several example programs that demonstrate the usage of Variorum functions.)
+<img alt="alt text" src="../image.png" /></p>
+<h2 id="step-2-compile-the-example-programs">Step 2: Compile the Example Programs</h2>
+<p>The next step is to compile the example programs to generate the executable files. <strong>It's important to compile the programs with root access, as Variorum requires access to the Model-Specific Register (MSR) files to gather data</strong>, and only the root user has permission to access these files.</p>
+<p>To compile an example program, use the following command:</p>
+<p>**ggcc -o variorum-get-thermals-json-example variorum-get-thermals-json-example.c \
+-I/home/cadmin/variorum_demo/variorum/install/include \
+-L/home/cadmin/variorum_demo/variorum/install/lib -lvariorum
+** </p>
+<p>{ Explanation of the Command:
+gcc: This is the GNU Compiler Collection, used to compile C programs.</p>
+<p><strong>-o variorum-get-thermals-json-example</strong>: This option specifies the name of the output executable file.(variorum-get-thermals-json-example).</p>
+<p><strong>variorum-get-thermals-json-example.c</strong>: This is the name of the C source file that you're compiling.</p>
+<p><strong>-I/home/cadmin/variorum_demo/variorum/install/include</strong>: This flag tells the compiler where to find the header files for Variorum.</p>
+<p><strong>-L/home/cadmin/variorum_demo/variorum/install/lib</strong>: This flag tells the compiler where to find the library files for Variorum.</p>
+<p><strong>-lvariorum</strong>: This links the libvariorum library to the compiled program. }</p>
+<h2 id="step-3-set-the-library-path">Step 3: Set the Library Path</h2>
+<p>Before running the compiled executable, you need to set the LD_LIBRARY_PATH environment variable to include the directory where the Variorum library is installed. This ensures that the system can locate the necessary library files when the program is executed.</p>
+<p><strong>Run the following command to export the library path:</strong></p>
+<p><strong>export LD_LIBRARY_PATH=/home/cadmin/variorum_demo/variorum/install/lib:$LD_LIBRARY_PATH</strong></p>
+<p>Why This is Needed:
+The LD_LIBRARY_PATH environment variable is used by the dynamic linker to locate shared libraries at runtime. By adding the Variorum library path to this variable, you ensure that the system can find and load the Variorum libraries needed by the executable.</p>
+<h2 id="step-4-run-the-executable">Step 4: Run the Executable</h2>
+<p>Once you've compiled the program and set the LD_LIBRARY_PATH, you can run the executable as follows:</p>
+<p><strong>./variorum-get-thermals-json-example</strong></p>
+<p><img alt="alt text" src="../image-1.png" />
+<img alt="alt text" src="../image-2.png" /></p></div>
             </div>
         </div>
 
